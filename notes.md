@@ -8,7 +8,8 @@ PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 - Includes options to show hidden files, use colored output, and the root directory that the program should start reading from.
 - Flags should be used to show hidden files (-h) and not using colored output (-nc).
 ## ConsoleColor.java
-- Applies color to console text
+- Applies color to console text using Enums representing ANSI escape codes.
+- To apply a color, prepend the desired color ANSI code to the text and append the REST code after the text to rest the color to default.
 
 ## ColorPrinter.java / ColorPrinterTest.java
 
