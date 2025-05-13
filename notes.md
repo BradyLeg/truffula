@@ -4,8 +4,11 @@ As part of Wave 0, please fill out notes for each of the below files. They are i
 PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 
 ## App.java
-
+- Actual file that gets executed.
+- Includes options to show hidden files, use colored output, and the root directory that the program should start reading from.
+- Flags should be used to show hidden files (-h) and not using colored output (-nc).
 ## ConsoleColor.java
+- Applies color to console text
 
 ## ColorPrinter.java / ColorPrinterTest.java
 
