@@ -12,6 +12,9 @@ PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 - To apply a color, prepend the desired color ANSI code to the text and append the REST code after the text to rest the color to default.
 
 ## ColorPrinter.java / ColorPrinterTest.java
+- ColorPrinter is a class that supports printing colored text using PrintStream.
+- Allows setting a current color, print messages in that color, and deciding if the color should be rest or not.
+- Colors and the rest code can be accessed from the ConsoleColor class
 
 ## TruffulaOptions.java / TruffulaOptionsTest.java
 
