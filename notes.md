@@ -15,6 +15,7 @@ PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 - ColorPrinter is a class that supports printing colored text using PrintStream.
 - Allows setting a current color, print messages in that color, and deciding if the color should be rest or not.
 - Colors and the rest code can be accessed from the ConsoleColor class
+- ColorPrintTest contains a test for checking if the color red is applied to the test properly 
 
 ## TruffulaOptions.java / TruffulaOptionsTest.java
 
