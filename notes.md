@@ -13,12 +13,20 @@ PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 
 ## ColorPrinter.java / ColorPrinterTest.java
 - ColorPrinter is a class that supports printing colored text using PrintStream.
-- Allows setting a current color, print messages in that color, and deciding if the color should be rest or not.
-- Colors and the rest code can be accessed from the ConsoleColor class
+- Allows setting a current color, print messages in that color, and deciding if the color should be reset or not.
+- Colors and the reset code can be accessed from the ConsoleColor class
 - ColorPrintTest contains a test for checking if the color red is applied to the text properly 
 
 ## TruffulaOptions.java / TruffulaOptionsTest.java
+- checks flags for if color should not be used (-nc) 
+- or if hidden files should be shown (-h) 
+- if unkown flags are provided or path argument is missing, throws illegalArgumentException/
+- FileNotFoundException will be thrown if specified directory does not exist or if path    points to a file instead of a directory
+- checks to see if flags are being created properly 
+- checks if file directory path is being read correctly
 
 ## TruffulaPrinter.java / TruffulaPrinterTest.java
+
+
 
 ## AlphabeticalFileSorter.java
