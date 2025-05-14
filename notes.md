@@ -32,5 +32,6 @@ PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 - Test file checks if os used is Windows or not.
 - Test file contains a test to see if the directories and files are being printed out correctly and in the right order.
 
-
 ## AlphabeticalFileSorter.java
+- Sorts an array of files alphabetically by name, ignoring case.
+- uses lambdas, a shortcut way of writing small code without giving it a name 
