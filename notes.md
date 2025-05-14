@@ -10,6 +10,7 @@ PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 ## ConsoleColor.java
 - Applies color to console text using Enums representing ANSI escape codes.
 - To apply a color, prepend the desired color ANSI code to the text and append the REST code after the text to rest the color to default.
+- Enums aka enumerations, are constants, variables with unchangeable values.
 
 ## ColorPrinter.java / ColorPrinterTest.java
 - ColorPrinter is a class that supports printing colored text using PrintStream.
@@ -18,7 +19,15 @@ PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 - ColorPrintTest contains a test for checking if the color red is applied to the test properly 
 
 ## TruffulaOptions.java / TruffulaOptionsTest.java
+- checks flags for if color should not be used (-nc) 
+- or if hidden files should be shown (-h) 
+- if unkown flags are provided or path argument is missing, throws illegalArgumentException/
+- FileNotFoundException will be thrown if specified directory does not exist or if path    points to a file instead of a directory
+- checks to see if flags are being created properly 
+- checks if file directory path is being read correctly
 
 ## TruffulaPrinter.java / TruffulaPrinterTest.java
+
+
 
 ## AlphabeticalFileSorter.java
