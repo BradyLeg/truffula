@@ -26,7 +26,11 @@ PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 - checks if file directory path is being read correctly
 
 ## TruffulaPrinter.java / TruffulaPrinterTest.java
-
+- Prints the directory tree structure.
+- Supports sorting files and directories in a case-insensitive alphabetical order.
+- Cycles through texts colors for visually clarifying which level files and directories are at.
+- Test file checks if os used is Windows or not.
+- Test file contains a test to see if the directories and files are being printed out correctly and in the right order.
 
 
 ## AlphabeticalFileSorter.java
