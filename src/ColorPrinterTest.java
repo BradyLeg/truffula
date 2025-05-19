@@ -20,10 +20,24 @@ class ColorPrinterTest {
     String message = "I speak for the trees";
     printer.println(message);
 
-
     String expectedOutput = ConsoleColor.RED + "I speak for the trees" + System.lineSeparator() + ConsoleColor.RESET;
 
     // Assert: Verify the printed output
     assertEquals(expectedOutput, outputStream.toString());
+  }
+
+  @Test
+  void testPrintWithCyanSingleParameterRestTrue() {
+    ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+    PrintStream printStream = new PrintStream(outputStream);
+
+    ColorPrinter printer = new ColorPrinter(printStream);
+    printer.setCurrentColor(ConsoleColor.CYAN);
+
+    printer.print("Miku Miku Beeeeaaaaam");
+
+    String expected = ConsoleColor.CYAN + "Miku Miku Beeeeaaaaam" + ConsoleColor.RESET;
+
+    assertEquals(expected, outputStream.toString());
   }
 }
