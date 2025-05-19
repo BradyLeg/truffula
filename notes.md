@@ -9,14 +9,13 @@ PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 - Flags should be used to show hidden files (-h) and not using colored output (-nc).
 ## ConsoleColor.java
 - Applies color to console text using Enums representing ANSI escape codes.
-- To apply a color, prepend the desired color ANSI code to the text and append the REST code after the text to rest the color to default.
-- Enums aka enumerations, are constants, variables with unchangeable values.
+- To apply a color, prepend the desired color ANSI code to the text and append the RESET code after the text to reset the color to default.
 
 ## ColorPrinter.java / ColorPrinterTest.java
 - ColorPrinter is a class that supports printing colored text using PrintStream.
-- Allows setting a current color, print messages in that color, and deciding if the color should be rest or not.
-- Colors and the rest code can be accessed from the ConsoleColor class
-- ColorPrintTest contains a test for checking if the color red is applied to the test properly 
+- Allows setting a current color, print messages in that color, and deciding if the color should be reset or not.
+- Colors and the reset code can be accessed from the ConsoleColor class
+- ColorPrintTest contains a test for checking if the color red is applied to the text properly 
 
 ## TruffulaOptions.java / TruffulaOptionsTest.java
 - checks flags for if color should not be used (-nc) 
@@ -27,9 +26,11 @@ PLEASE MAKE FREQUENT COMMITS AS YOU FILL OUT THIS FILE.
 - checks if file directory path is being read correctly
 
 ## TruffulaPrinter.java / TruffulaPrinterTest.java
-
-
-
+- Prints the directory tree structure.
+- Supports sorting files and directories in a case-insensitive alphabetical order.
+- Cycles through texts colors for visually clarifying which level files and directories are at.
+- Test file checks if os used is Windows or not.
+- Test file contains a test to see if the directories and files are being printed out correctly and in the right order.
 
 
 ## AlphabeticalFileSorter.java

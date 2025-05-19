@@ -8,7 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ColorPrinterTest {
 
   @Test
-  void testPrintlnWithRedColorAndReset() {
+  void testPrintlnWithRedColorAndReset() 
+  {
     // Arrange: Capture the printed output
     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     PrintStream printStream = new PrintStream(outputStream);

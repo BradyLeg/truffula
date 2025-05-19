@@ -18,7 +18,8 @@
  * - WHITE   : White text
  * - RESET   : Resets the text color to default
  */
-public enum ConsoleColor {
+public enum ConsoleColor 
+{
   /**
    * Black text color (ANSI code: \033[0;30m).
    */
