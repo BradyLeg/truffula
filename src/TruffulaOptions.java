@@ -113,29 +113,38 @@ public class TruffulaOptions {
     boolean hidden = false;
     boolean color = false;
 
+    boolean foundHidden = false;
+    boolean foundColor = false;
+
     if (args.length == 0) {
       throw new IllegalArgumentException("no args");
     }
 
     for (int i = 0; i < args.length; i++) {
 
-      if (args[i].equals("-h")) {
-        hidden = true;
-      } else {
-        hidden = false;
+      if (!foundHidden) {
+        if (args[i].equals("-h")) {
+          hidden = true;
+          foundHidden = true;
+        } else {
+          hidden = false;
+        }
       }
 
-      if (args[i].equals("-nc")) {
-        color = false;
-      } else {
-        color = true;
+      if (!foundColor) {
+        if (args[i].equals("-nc")) {
+          color = false;
+          foundColor = true;
+        } else {
+          color = true;
+        }
       }
 
     }
 
-    if (args[args.length - 1].contains("/")) {
-      dir = new File(args[args.length - 1]);
-    } else {
+    dir = new File(args[args.length - 1]);
+
+    if (!(dir.exists() && dir.isDirectory())) {
       throw new FileNotFoundException();
     }
 
