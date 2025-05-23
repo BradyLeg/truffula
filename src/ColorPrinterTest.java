@@ -59,13 +59,8 @@ class ColorPrinterTest {
     // the printed message will stay red and will not reset after print
     printer.print(message, false);
 
-<<<<<<< HEAD
-    //assert
-    String expected = ConsoleColor.RED.toString() + message; 
-=======
+    // assert
     String expected = ConsoleColor.RED.toString() + message;
->>>>>>> dbff46f2417bae348529477db401c1a34a97a8e7
-
     assertEquals(expected, output.toString());
   }
 }
