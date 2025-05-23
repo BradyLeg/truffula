@@ -107,4 +107,22 @@ public class TruffulaOptionsTest {
     // Assert: Check that the root directory is set correctly
     assertThrows(IllegalArgumentException.class, () -> new TruffulaOptions(args));
   }
+
+  @Test
+  void testValidDirectoryIsSet_ThrowsFileNotFoundException(@TempDir File tempDir) throws FileNotFoundException {
+    // Arrange: Prepare the arguments with the temp directory
+    String[] args = { "/fake/dir" };
+
+    // Assert: Check that the root directory is set correctly
+    assertThrows(FileNotFoundException.class, () -> new TruffulaOptions(args));
+  }
+
+  @Test
+  void testValidDirectoryIsSet_ThrowsFileNotFoundExceptionFile(@TempDir File tempDir) throws FileNotFoundException {
+    // Arrange: Prepare the arguments with the temp directory
+    String[] args = { "/src/App.java" };
+
+    // Assert: Check that the root directory is set correctly
+    assertThrows(FileNotFoundException.class, () -> new TruffulaOptions(args));
+  }
 }
