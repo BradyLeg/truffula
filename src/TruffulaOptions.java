@@ -106,7 +106,8 @@ public class TruffulaOptions {
    * @throws FileNotFoundException    if the directory cannot be found or if the
    *                                  path points to a file
    */
-  public TruffulaOptions(String[] args) throws IllegalArgumentException, FileNotFoundException {
+  public TruffulaOptions(String[] args) throws IllegalArgumentException, FileNotFoundException 
+  {
     // TODO: Replace the below lines with your implementation
     File dir = null;
     boolean hidden = false;
