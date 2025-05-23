@@ -16,7 +16,7 @@ public class TruffulaOptionsTest {
     File directory = new File(tempDir, "subfolder");
     directory.mkdir();
     String directoryPath = directory.getAbsolutePath();
-    String[] args = {"-nc", "-h", directoryPath};
+    String[] args = { "-nc", "-h", directoryPath };
 
     // Act: Create TruffulaOptions instance
     TruffulaOptions options = new TruffulaOptions(args);
@@ -24,6 +24,57 @@ public class TruffulaOptionsTest {
     // Assert: Check that the root directory is set correctly
     assertEquals(directory.getAbsolutePath(), options.getRoot().getAbsolutePath());
     assertTrue(options.isShowHidden());
+    assertFalse(options.isUseColor());
+  }
+
+  @Test
+  void testValidDirectoryIsSet_DifferentOrder(@TempDir File tempDir) throws FileNotFoundException {
+    // Arrange: Prepare the arguments with the temp directory
+    File directory = new File(tempDir, "subfolder");
+    directory.mkdir();
+    String directoryPath = directory.getAbsolutePath();
+    String[] args = { "-h", "-nc", directoryPath };
+
+    // Act: Create TruffulaOptions instance
+    TruffulaOptions options = new TruffulaOptions(args);
+
+    // Assert: Check that the root directory is set correctly
+    assertEquals(directory.getAbsolutePath(), options.getRoot().getAbsolutePath());
+    assertTrue(options.isShowHidden());
+    assertFalse(options.isUseColor());
+  }
+
+  @Test
+  void testValidDirectoryIsSet_ShowHiddenOnly(@TempDir File tempDir) throws FileNotFoundException {
+    // Arrange: Prepare the arguments with the temp directory
+    File directory = new File(tempDir, "subfolder");
+    directory.mkdir();
+    String directoryPath = directory.getAbsolutePath();
+    String[] args = { "-h", directoryPath };
+
+    // Act: Create TruffulaOptions instance
+    TruffulaOptions options = new TruffulaOptions(args);
+
+    // Assert: Check that the root directory is set correctly
+    assertEquals(directory.getAbsolutePath(), options.getRoot().getAbsolutePath());
+    assertTrue(options.isShowHidden());
+    assertTrue(options.isUseColor());
+  }
+
+  @Test
+  void testValidDirectoryIsSet_NoColorOnly(@TempDir File tempDir) throws FileNotFoundException {
+    // Arrange: Prepare the arguments with the temp directory
+    File directory = new File(tempDir, "subfolder");
+    directory.mkdir();
+    String directoryPath = directory.getAbsolutePath();
+    String[] args = { "-nc", directoryPath };
+
+    // Act: Create TruffulaOptions instance
+    TruffulaOptions options = new TruffulaOptions(args);
+
+    // Assert: Check that the root directory is set correctly
+    assertEquals(directory.getAbsolutePath(), options.getRoot().getAbsolutePath());
+    assertFalse(options.isShowHidden());
     assertFalse(options.isUseColor());
   }
 }
