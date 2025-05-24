@@ -137,7 +137,7 @@ public class TruffulaPrinter {
     File[] subFiles = {};
 
     for (int i = 0; i < depth; i++) {
-      out.print("   ");
+      fileName = "   " + fileName;
     }
 
     depth++;
