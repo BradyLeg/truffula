@@ -221,23 +221,23 @@ public class TruffulaPrinterTest {
 
         //the output changes, updates so no color expected
         
-        // ConsoleColor reset = ConsoleColor.RESET;
-        // ConsoleColor white = ConsoleColor.WHITE;
+        ConsoleColor reset = ConsoleColor.RESET;
+        ConsoleColor white = ConsoleColor.WHITE;
         // ConsoleColor purple = ConsoleColor.PURPLE;
         // ConsoleColor yellow = ConsoleColor.YELLOW;
 
         // Build expected output with exact colors and indentation
         StringBuilder expected = new StringBuilder();
         expected.append("myFolder/").append(nl).append(reset);
-        expected.append("   Apple.txt").append(nl);
-        expected.append("   banana.txt").append(nl);
-        expected.append("   Documents/").append(nl);
-        expected.append("      images/").append(nl);
-        expected.append("         cat.png").append(nl);
-        expected.append("         Dog.png").append(nl);
-        expected.append("      notes.txt").append(nl);
-        expected.append("      README.md").append(nl);
-        expected.append("   zebra.txt").append(nl);
+        expected.append("   Apple.txt").append(nl).append(reset);
+        expected.append("   banana.txt").append(nl).append(reset);
+        expected.append("   Documents/").append(nl).append(reset);
+        expected.append("      images/").append(nl).append(reset);
+        expected.append("         cat.png").append(nl).append(reset);
+        expected.append("         Dog.png").append(nl).append(reset);
+        expected.append("      notes.txt").append(nl).append(reset);
+        expected.append("      README.md").append(nl).append(reset);
+        expected.append("   zebra.txt").append(nl).append(reset);
 
         // Assert that the output matches the expected output exactly
         assertEquals(expected.toString(), output);
