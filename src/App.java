@@ -1,5 +1,4 @@
 
-
 public class App {
 
   /**
@@ -44,8 +43,7 @@ public class App {
    * 
    * Error messages will be shown for illegal arguments or a not found file
    */
-  public static void main(String[] args) throws Exception 
-  {
+  public static void main(String[] args) throws Exception {
     // TODO: Implement this
     // You should create a TruffulaOptions object using the args and
     TruffulaOptions options = new TruffulaOptions(args);
@@ -55,5 +53,6 @@ public class App {
 
     // Then, call printTree on the TruffulaPrinter
     printer.printTree();
+
   }
 }
