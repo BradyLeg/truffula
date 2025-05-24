@@ -55,6 +55,5 @@ public class App {
 
     // Then, call printTree on the TruffulaPrinter
     printer.printTree();
-
   }
 }

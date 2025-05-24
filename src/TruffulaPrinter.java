@@ -102,7 +102,18 @@ public class TruffulaPrinter {
    *       README.md
    *    zebra.txt
    */
-  public void printTree() {
+  public void printTree() 
+  {
+    File root = options.getRootDirectory();
+
+    if(root == null || !root.exists())
+    {
+      out.println("empty");
+      return;
+    }
+
+    printTreeRecurse(root, 0);
+    
     // TODO: Implement this!
     // REQUIRED: ONLY use java.io, DO NOT use java.nio
     
