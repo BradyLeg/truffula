@@ -228,16 +228,16 @@ public class TruffulaPrinterTest {
 
         // Build expected output with exact colors and indentation
         StringBuilder expected = new StringBuilder();
-        expected.append("myFolder/").append(nl).append(reset);
-        expected.append("   Apple.txt").append(nl).append(reset);
-        expected.append("   banana.txt").append(nl).append(reset);
-        expected.append("   Documents/").append(nl).append(reset);
-        expected.append("      images/").append(nl).append(reset);
-        expected.append("         cat.png").append(nl).append(reset);
-        expected.append("         Dog.png").append(nl).append(reset);
-        expected.append("      notes.txt").append(nl).append(reset);
-        expected.append("      README.md").append(nl).append(reset);
-        expected.append("   zebra.txt").append(nl).append(reset);
+    expected.append(white).append("myFolder/").append(nl).append(reset);
+        expected.append(white).append("   Apple.txt").append(nl).append(reset);
+        expected.append(white).append("   banana.txt").append(nl).append(reset);
+        expected.append(white).append("   Documents/").append(nl).append(reset);
+        expected.append(white).append("      images/").append(nl).append(reset);
+        expected.append(white).append("         cat.png").append(nl).append(reset);
+        expected.append(white).append("         Dog.png").append(nl).append(reset);
+        expected.append(white).append("      notes.txt").append(nl).append(reset);
+        expected.append(white).append("      README.md").append(nl).append(reset);
+        expected.append(white).append("   zebra.txt").append(nl).append(reset);
 
         // Assert that the output matches the expected output exactly
         assertEquals(expected.toString(), output);
