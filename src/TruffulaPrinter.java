@@ -118,20 +118,32 @@ public class TruffulaPrinter {
     // DO NOT USE SYSTEM.OUT.PRINTLN
     // USE out.println instead (will use your ColorPrinter)
 
+   ConsoleColor[] colors = 
+   {
+    ConsoleColor.WHITE,
+    ConsoleColor.PURPLE,
+    ConsoleColor.YELLOW    
+   };
+
     File root = options.getRoot();
 
     if (root.isDirectory() && root.exists()) {
-      printTreeRecurse(root, 0);
+      printTreeRecurse(root, 0, colors);
     } else {
       out.println("empty");
       return;
     }
   }
 
-  public void printTreeRecurse(File file, int depth) {
+
+  public void printTreeRecurse(File file, int depth, ConsoleColor[] colors) 
+  {
     if (file == null) {
       return;
     }
+
+    out.setCurrentColor(colors[depth%3]);
+
 
     String fileName = file.getName();
     File[] subFiles = {};
@@ -150,11 +162,11 @@ public class TruffulaPrinter {
       for (File subFile : subFiles) {
         // true and true
         if (options.isShowHidden() && subFile.isHidden()) {
-          printTreeRecurse(subFile, depth);
+          printTreeRecurse(subFile, depth, colors);
         }
         // !false = true
         if (!subFile.isHidden()) {
-          printTreeRecurse(subFile, depth);
+          printTreeRecurse(subFile, depth, colors);
         }
       }
     } else {
