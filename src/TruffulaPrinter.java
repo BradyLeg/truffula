@@ -156,7 +156,6 @@ public class TruffulaPrinter {
         if (!subFile.isHidden()) {
           printTreeRecurse(subFile, depth);
         }
-
       }
     } else {
       out.println(fileName);
