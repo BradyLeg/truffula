@@ -108,7 +108,8 @@ public class TruffulaPrinter {
    * README.md
    * zebra.txt
    */
-  public void printTree() {
+  public void printTree() 
+  {
     // TODO: Implement this!
     // REQUIRED: ONLY use java.io, DO NOT use java.nio
 
@@ -147,7 +148,8 @@ public class TruffulaPrinter {
 
       subFiles = file.listFiles();
 
-      for (File subFile : subFiles) {
+      for (File subFile : subFiles) 
+      {
         printTreeRecurse(subFile, depth);
       }
     } else {
