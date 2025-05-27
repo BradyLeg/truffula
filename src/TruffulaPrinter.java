@@ -129,7 +129,7 @@ public class TruffulaPrinter {
   }
 
   public void printTreeRecurse(File file, int depth) {
-    if (file == null || depth > 3) {
+    if (file == null) {
       return;
     }
 
