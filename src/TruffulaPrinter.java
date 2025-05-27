@@ -148,7 +148,15 @@ public class TruffulaPrinter {
       subFiles = file.listFiles();
 
       for (File subFile : subFiles) {
-        printTreeRecurse(subFile, depth);
+        // true and true
+        if (options.isShowHidden() && subFile.isHidden()) {
+          printTreeRecurse(subFile, depth);
+        }
+        // !false = true
+        if (!subFile.isHidden()) {
+          printTreeRecurse(subFile, depth);
+        }
+
       }
     } else {
       out.println(fileName);
